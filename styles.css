@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.site {
+    height: 100vh;
+    width: 100vw;
+    background-color: #FAF9F6;
+    font-family: pathway extreme;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 75px;
+}
+
+.main-container {
+    width: 20rem;
+    height: 25rem;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 6px solid black;
+    border-bottom: 6px solid black;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+}
