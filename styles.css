@@ -39,6 +39,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+
 }
 
 #show-form {
@@ -136,5 +138,8 @@
 .book-container {
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF9F6;
+    border: #24292e 2px solid;
 }

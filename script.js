@@ -7,7 +7,7 @@ document.querySelector("#show-form").addEventListener("click", function () {
   document.querySelector(".pop-up").classList.add("active");
 });
 
-submit.addEventListener("click", function () {
+submit.addEventListener("click", function addBookToLibrary() {
   var newCard = document.createElement("div"); // Create a new instance of newCard each time
   var titleDIV = document.createElement("div");
   var authorDIV = document.createElement("div");
