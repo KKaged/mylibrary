@@ -41,7 +41,7 @@
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.add-book {
+#show-form {
     border-top: 3px solid #24292e;
     border-left: 3px solid #24292e;
     border-right: 6px solid #24292e;
@@ -52,7 +52,7 @@
     grid-column: 4/4;
 }
 
-.add-book:active {
+#show-form:active {
     background-color: #0a79e8;
     border-top: 3px solid #24292e;
     border-left: 3px solid #24292e;
@@ -72,6 +72,25 @@
     gap: 5px;
     display: flex;
     flex-direction: column;
+
+    position: absolute;
+    top: -150%;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(1.25);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+}
+
+.pop-up.active {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
 }
 
 .pop-text {
