@@ -1,12 +1,29 @@
-var title = document.querySelector("#title").value;
-var author = document.querySelector("#author").value;
-var pages = document.querySelector("#pages").value;
-const submit = document.querySelector(".form-submit");
+var title = document.querySelector("#title");
+var author = document.querySelector("#author");
+var pages = document.querySelector("#pages");
+var submit = document.querySelector(".form-submit");
+var newCard = document.createElement("div");
+var titleDIV = document.createElement("div");
+var authorDIV = document.createElement("div");
+var pagesDIV = document.createElement("div");
 
-document.querySelector(`#show-form`).addEventListener("click", function () {
+document.querySelector("#show-form").addEventListener("click", function () {
   document.querySelector(".pop-up").classList.add("active");
 });
 
 submit.addEventListener("click", function () {
+  newCard.classList.add("book-container");
+  titleDIV.classList.add("book-title");
+  authorDIV.classList.add("book-author");
+  titleDIV.textContent = title.value;
+  authorDIV.textContent = author.value;
+  pagesDIV.textContent = pages.value;
+  document.querySelector(".main-container").appendChild(newCard);
+  newCard.appendChild(titleDIV);
+  newCard.appendChild(authorDIV);
+  newCard.appendChild(pagesDIV);
   document.querySelector(".pop-up").classList.remove("active");
+  title.value = "";
+  author.value = "";
+  pages.value = "";
 });
