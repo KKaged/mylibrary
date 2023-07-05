@@ -37,8 +37,8 @@
     border-bottom: 6px solid #24292e;
     border-radius: 7px;
     display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 #show-form {
