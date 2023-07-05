@@ -1,3 +1,3 @@
-function pressed() {
+function popup() {
   console.log("pressed!");
 }

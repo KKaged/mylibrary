@@ -10,10 +10,30 @@
     <div class="site">
       <header class="header">
         <h3 class="page-title">My Library.</h3>
-        <button class="add-book" onclick="pressed()">Add Book</button>
+        <button class="add-book" onclick="popup()">Add Book</button>
       </header>
       <main class="main">
-        <div class="pop-up"></div>
+        <div class="pop-up">
+          <form class="pop-text" action="">
+            <label for="title">Title:</label>
+            <input class="input" type="text" id="title" placeholder="Title" />
+          </form>
+          <form class="pop-text" action="">
+            <label for="author">Author:</label>
+            <input class="input" type="text" id="author" placeholder="Author" />
+          </form>
+          <form class="pop-text" action="">
+            <label for="pages">Pages:</label>
+            <input class="input" type="text" id="pages" placeholder="Pages" />
+          </form>
+          <form class="pop-text" action="">
+            <label for="read">Have you read the book?</label>
+            <input class="input" type="checkbox" name="read" id="read" />
+          </form>
+          <form action="">
+            <button class="form-submit" type="submit">Submit</button>
+          </form>
+        </div>
         <div class="main-container"></div>
       </main>
     </div>
