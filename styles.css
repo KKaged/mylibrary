@@ -33,7 +33,7 @@
     height: 30rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 2px;
 
 }
@@ -49,8 +49,14 @@
     grid-column: 4/4;
 }
 
-#show-form:active {
+#show-form:hover {
     background-color: #0a79e8;
+    color: #FAF9F6;
+}
+
+
+#show-form:active {
+    background-color: #084f96;
     border-top: 3px solid #24292e;
     border-left: 3px solid #24292e;
     border-right: 6px solid #24292e;
@@ -58,6 +64,7 @@
     border-radius: 10px;
     color: #FAF9F6;
 }
+
 
 .pop-up {
     border-top: 3px solid #24292e;
@@ -99,6 +106,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 10px;
 }
 
 .input {
@@ -125,10 +133,41 @@
     color: #24292e;
 }
 
-.form-submit:active {
+
+.form-submit:hover {
     background-color: #0a79e8;
     color: #FAF9F6;
 }
+
+.form-submit:active {
+    background-color: #084f96;
+    color: #FAF9F6;
+}
+
+.exit {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 1px solid #24292e;
+    border-left: 1px solid #24292e;
+    border-right: 2px solid #24292e;
+    border-bottom: 3px solid #24292e;
+    background-color: #FAF9F6;
+    border-radius: 5px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.exit:hover {
+    background-color: rgb(255, 40, 40);
+    color: #FAF9F6;
+}
+
+.exit:active {
+    background-color: rgb(172, 0, 0);
+    color: #FAF9F6;
+}
+
 
 .book-container {
     display: flex;
@@ -137,5 +176,4 @@
     align-items: center;
     background-color: #FAF9F6;
     border: #24292e 2px solid;
-    width: 50%;
 }
