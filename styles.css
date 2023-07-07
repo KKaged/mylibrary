@@ -31,14 +31,9 @@
 .main-container {
     width: 75rem;
     height: 30rem;
-    border-top: 3px solid #24292e;
-    border-left: 3px solid #24292e;
-    border-right: 6px solid #24292e;
-    border-bottom: 6px solid #24292e;
-    border-radius: 7px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 2px;
 
 }
@@ -142,4 +137,5 @@
     align-items: center;
     background-color: #FAF9F6;
     border: #24292e 2px solid;
+    width: 50%;
 }
