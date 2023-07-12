@@ -55,6 +55,13 @@ function displayBooks() {
     didRead.classList.add("mini-status");
     didRead.classList.add("input");
     didRead.value = book.read;
+    didRead.onclick = function () {
+      if (didRead.value == "Read") {
+        didRead.value = "Not Read";
+      } else if (didRead.value == "Not Read") {
+        didRead.value = "Read";
+      }
+    };
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(page);
