@@ -4,6 +4,7 @@ var page = document.querySelector("#pages");
 var submit = document.querySelector(".form-submit");
 var mainContainer = document.querySelector(".main-container");
 var readStatus = document.getElementById("readButton");
+var update = document.getElementsByClassName("mini-status");
 
 let myLibrary = [];
 
@@ -49,12 +50,15 @@ function displayBooks() {
     var page = document.createElement("div");
     page.textContent = "Pages: " + book.pages;
 
-    var readStatus = document.createElement("div");
-    readStatus.textContent = book.read;
+    var didRead = document.createElement("input");
+    didRead.type = "button";
+    didRead.classList.add("mini-status");
+    didRead.classList.add("input");
+    didRead.value = book.read;
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(page);
-    card.appendChild(readStatus);
+    card.appendChild(didRead);
     mainContainer.appendChild(card);
     titles.value = "";
     authors.value = "";

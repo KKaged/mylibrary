@@ -199,3 +199,17 @@
 .statusRead:active {
     background-color: #084f96;
 }
+
+.mini-status {
+    width: 5rem;
+}
+
+.mini-status:hover {
+    background-color: #0a79e8;
+    color: #FAF9F6;
+}
+
+.mini-status:active {
+    background-color: #084f96;
+    color: #FAF9F6;
+}
