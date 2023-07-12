@@ -1,9 +1,9 @@
 var titles = document.querySelector("#title");
 var authors = document.querySelector("#author");
 var page = document.querySelector("#pages");
-var readBox = document.querySelector("#read");
 var submit = document.querySelector(".form-submit");
 var mainContainer = document.querySelector(".main-container");
+var readStatus = document.getElementById("readButton");
 
 let myLibrary = [];
 
@@ -27,8 +27,7 @@ function addBookToLibrary() {
   var titleValue = titles.value;
   var authorValue = authors.value;
   var pagesValue = pages.value;
-  var readValue = readBox.checked;
-
+  var readValue = readStatus.value;
   var newBook = new book(titleValue, authorValue, pagesValue, readValue);
   myLibrary.push(newBook);
   console.log(myLibrary);
@@ -45,13 +44,13 @@ function displayBooks() {
     title.textContent = book.title;
 
     var author = document.createElement("div");
-    author.textContent = "Author: " + book.author;
+    author.textContent = "By: " + book.author;
 
     var page = document.createElement("div");
     page.textContent = "Pages: " + book.pages;
 
     var readStatus = document.createElement("div");
-    readStatus.textContent = book.read ? "Read" : "Not Read";
+    readStatus.textContent = book.read;
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(page);
@@ -60,7 +59,6 @@ function displayBooks() {
     titles.value = "";
     authors.value = "";
     pages.value = "";
-    readBox.checked = false;
   });
 }
 
@@ -69,5 +67,12 @@ function exit() {
   titles.value = "";
   authors.value = "";
   pages.value = "";
-  readBox.checked = false;
+}
+
+function status() {
+  if (readButton.value == "Read") {
+    readButton.value = "Not Read";
+  } else if (readButton.value == "Not Read") {
+    readButton.value = "Read";
+  }
 }

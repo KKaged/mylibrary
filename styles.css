@@ -107,6 +107,7 @@
     align-items: center;
     text-align: center;
     padding-top: 10px;
+    gap: 5px;
 }
 
 .input {
@@ -176,4 +177,25 @@
     align-items: center;
     background-color: #FAF9F6;
     border: #24292e 2px solid;
+    border-radius: 6px;
+}
+
+.readStatus {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: .5rem;
+}
+
+.statusRead {
+    width: 8rem;
+}
+
+.statusRead:hover {
+    background-color: #0a79e8;
+    color: #FAF9F6;
+}
+
+.statusRead:active {
+    background-color: #084f96;
 }
