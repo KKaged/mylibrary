@@ -30,6 +30,7 @@ function addBookToLibrary() {
   var pagesValue = pages.value;
   var readValue = readStatus.value;
   var newBook = new book(titleValue, authorValue, pagesValue, readValue);
+  newBook.toggleReadStatus = toggleReadStatus;
   myLibrary.push(newBook);
   console.log(myLibrary);
   displayBooks();
@@ -56,11 +57,8 @@ function displayBooks() {
     didRead.classList.add("input");
     didRead.value = book.read;
     didRead.onclick = function () {
-      if (didRead.value == "Read") {
-        didRead.value = "Not Read";
-      } else if (didRead.value == "Not Read") {
-        didRead.value = "Read";
-      }
+      toggleReadStatus(book);
+      displayBooks();
     };
     card.appendChild(title);
     card.appendChild(author);
@@ -71,6 +69,15 @@ function displayBooks() {
     authors.value = "";
     pages.value = "";
   });
+}
+
+function toggleReadStatus(book) {
+  if (book.read === "Read") {
+    book.read = "Not Read";
+  } else if (book.read === "Not Read") {
+    book.read = "Read";
+  }
+  displayBooks();
 }
 
 function exit() {
