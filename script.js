@@ -1,18 +1,19 @@
 var titles = document.querySelector("#title");
 var authors = document.querySelector("#author");
-var page = document.querySelector("#pages");
+var pages = document.querySelector("#pages");
 var submit = document.querySelector(".form-submit");
 var mainContainer = document.querySelector(".main-container");
 var readStatus = document.getElementById("readButton");
-var update = document.getElementsByClassName("mini-status");
 
 let myLibrary = [];
 
-function book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 document.querySelector("#show-form").addEventListener("click", function () {
@@ -29,8 +30,7 @@ function addBookToLibrary() {
   var authorValue = authors.value;
   var pagesValue = pages.value;
   var readValue = readStatus.value;
-  var newBook = new book(titleValue, authorValue, pagesValue, readValue);
-  newBook.toggleReadStatus = toggleReadStatus;
+  var newBook = new Book(titleValue, authorValue, pagesValue, readValue);
   myLibrary.push(newBook);
   console.log(myLibrary);
   displayBooks();
@@ -87,10 +87,14 @@ function exit() {
   pages.value = "";
 }
 
+document.getElementById("readButton").addEventListener("click", function () {
+  status();
+});
+
 function status() {
-  if (readButton.value == "Read") {
-    readButton.value = "Not Read";
-  } else if (readButton.value == "Not Read") {
-    readButton.value = "Read";
+  if (readStatus.value == "Read") {
+    readStatus.value = "Not Read";
+  } else if (readStatus.value == "Not Read") {
+    readStatus.value = "Read";
   }
 }
